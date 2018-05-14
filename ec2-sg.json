@@ -220,6 +220,10 @@
     "PublicIP" : {
       "Description" : "Public IP address of the newly created EC2 instance",
       "Value" : { "Fn::GetAtt" : [ "EC2Instance", "PublicIp" ] }
+    },
+    "WebsiteURL" : {
+      "Description" : "URL for newly created website",
+      "Value" : { "Fn::Join": ["", ["http://", {"Fn::GetAtt" : ["EC2Instance", "PublicDnsName" ]}]]}
     }
   }
 }

@@ -1,0 +1,13 @@
+{
+  "Resources": {
+    "BastionInstance": {
+      "Type": "AWS::EC2::Instance",
+      "Properties": {
+        "ImageId": "ami-423bec20",
+        "InstanceType": "t2.micro",
+        "SecurityGroupIds": ["sg-1f876b66"],
+        "SubnetId": "subnet-4040d027"
+      }
+    }
+  }
+}
